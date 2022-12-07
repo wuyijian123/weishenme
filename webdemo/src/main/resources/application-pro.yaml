@@ -1,0 +1,21 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+      name: defaultDataSource
+      url: jdbc:mysql://localhost:3306/web_demo?serverTimezone=UTC
+      username: root
+      password: 123456
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+logging:
+  level:
+    root: warn
+    com.example: debug
+  file:
+    name: webDemo-pro.log
+
+
