@@ -71,7 +71,7 @@ public class UserController {
         }
     }
     @DeleteMapping("/user/{id}")
-    public ResponseEntity<HttpStatus> deleteTutorial(@PathVariable("id") long id) {
+    public ResponseEntity<HttpStatus> deleteUser(@PathVariable("id") long id) {
         try {
             userRepository.deleteById(id);
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
@@ -79,5 +79,15 @@ public class UserController {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+    @DeleteMapping("/user")
+    public ResponseEntity<HttpStatus> deleteUserALl() {
+        try {
+            userRepository.deleteAll();
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
 
 }
