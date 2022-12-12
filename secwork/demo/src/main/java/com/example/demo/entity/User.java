@@ -13,9 +13,18 @@ import lombok.NoArgsConstructor;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private  long id;
+    private  int id;
     private String userName;
     private String sex;
     private String PhoneNumber;
     private  int age;
+
+
+    public User(int id, String userName, String sex, String phoneNumber, int age) {
+        this.id = id;
+        this.userName = userName;
+        this.sex = sex;
+        PhoneNumber = phoneNumber;
+        this.age = age;
+    }
 }

@@ -11,6 +11,7 @@ class DemoApplicationTests {
 
     @Autowired
     UserRepository userRepository;
+
     @Test
     void contextLoads() {
         User user=new User(0,"小红","女","114514",15);

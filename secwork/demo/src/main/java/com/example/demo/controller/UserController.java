@@ -10,6 +10,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+
+
 @CrossOrigin(origins = "http://127.0.0.1:5500/")
 @RestController
 @RequestMapping("/api")
@@ -19,6 +21,7 @@ public class UserController {
     public UserController(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
+
 
     @GetMapping("/user")
     public ResponseEntity<List<User>> getAllUser(@RequestParam(required = false) String userName) {
@@ -58,9 +61,9 @@ public class UserController {
     }
     @PutMapping("/user/{id}")
     public  ResponseEntity<User> updateUser(@PathVariable("id") long id,@RequestBody User user){
-        Optional<User> userdate=userRepository.findById(id);
-        if(userdate.isPresent()){
-            User user1=userdate.get();
+        Optional<User> userdata=userRepository.findById(id);
+        if(userdata.isPresent()){
+            User user1=userdata.get();
             user1.setUserName(user.getUserName());
             user1.setAge(user.getAge());
             user1.setPhoneNumber(user.getPhoneNumber());
