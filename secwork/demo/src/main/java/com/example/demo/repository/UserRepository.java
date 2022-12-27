@@ -5,10 +5,11 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import javax.swing.*;
 import java.util.List;
+import java.util.Optional;
 
 public interface UserRepository extends JpaRepository<User,Long> {
-    User findById(int id);
-    List<User> findAllByAge(int age);
+   Optional<User> findById(long id);
+    List<User> findAllByAge(long age);
 
     List<User> findAllByUserName(String userName);
 }

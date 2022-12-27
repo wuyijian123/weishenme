@@ -43,9 +43,9 @@ public class UserController {
     }
     @GetMapping("/user/{id}")
     public ResponseEntity<User> getUserById(@PathVariable("id")int id){
-       User user=userRepository.findById(id);
-        if (user!=null){
-            return  new ResponseEntity<>(user,HttpStatus.OK);
+       Optional<User> user=userRepository.findById(id);
+        if (user.isPresent()){
+            return  new ResponseEntity<>(user.get(),HttpStatus.OK);
         }else{
             return  new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }

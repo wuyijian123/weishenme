@@ -9,9 +9,10 @@ import lombok.NoArgsConstructor;
 
 import java.util.Date;
 import java.util.List;
+import java.util.UUID;
 
 @Entity
-@Table(name = "web_user")
+//@Table(name = "web_user")
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -153,13 +154,27 @@ public class User extends BaseEntity {
     public void setEnrolledCourses(List<Course> enrolledCourses) {
         this.enrolledCourses = enrolledCourses;
     }
-
+    public void setResults(List<Result> results) {
+        this.results = results;
+    }
     @JsonManagedReference
     public List<Result> getResults() {
         return results;
     }
 
-    public void setResults(List<Result> results) {
-        this.results = results;
+
+    public User(UUID id, String nickName, String userName, String email, String phone, String password, String avatar, int type, String salt, boolean applyTeacher) {
+        super(id);
+        this.nickName = nickName;
+        this.userName = userName;
+        this.email = email;
+        this.phone = phone;
+        this.password = password;
+        this.avatar = avatar;
+        this.type = type;
+        this.salt = salt;
+        this.applyTeacher = applyTeacher;
+        this.setCreateTime(new Date());
+        this.updateTime=createTime;
     }
 }

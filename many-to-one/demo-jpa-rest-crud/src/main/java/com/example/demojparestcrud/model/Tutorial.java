@@ -1,6 +1,8 @@
 package com.example.demojparestcrud.model;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 /*
 当我们使用JPA Repository从数据库中获取从父实体惰性加载的字段的数据时
 Hibernate返回一个对象，其中包含类的所有字段，
@@ -15,8 +17,9 @@ Hibernate返回一个对象，其中包含类的所有字段，
 public class Tutorial {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-//	@GeneratedValue(strategy = GenerationType.IDENTITY)
+ //	@GeneratedValue(strategy = GenerationType.AUTO)
+ // @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "tutorial_generator")
 	private long id;
 
 	@Column(name = "title")
@@ -28,10 +31,11 @@ public class Tutorial {
 	@Column(name = "published")
 	private boolean published;
 
+
+
 	public Tutorial() {
 
 	}
-
 	public Tutorial(String title, String description, boolean published) {
 		this.title = title;
 		this.description = description;
@@ -65,6 +69,8 @@ public class Tutorial {
 	public void setPublished(boolean isPublished) {
 		this.published = isPublished;
 	}
+
+
 
 	@Override
 	public String toString() {

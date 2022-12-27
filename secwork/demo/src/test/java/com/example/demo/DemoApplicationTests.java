@@ -14,7 +14,7 @@ class DemoApplicationTests {
 
     @Test
     void contextLoads() {
-        User user=new User(0,"小红","女","114514",15);
+        User user=new User(1L,"小红","女","114514",15);
         userRepository.save(user);
     }
 
