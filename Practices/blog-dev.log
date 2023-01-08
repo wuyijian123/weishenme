@@ -1,0 +1,10 @@
+2023-01-08 12:29:44.809  INFO 7648 --- [main] c.e.l.m.MyPracticesApplication           : Starting MyPracticesApplication using Java 18.0.1.1 on LAPTOP-1L6K1H8T with PID 7648 (D:\idea\weishenme\MyPractices\target\classes started by wei'shen'me in D:\idea\weishenme\MyPractices)
+2023-01-08 12:29:44.813 DEBUG 7648 --- [main] c.e.l.m.MyPracticesApplication           : Running with Spring Boot v2.7.6, Spring v5.3.24
+2023-01-08 12:29:44.814  INFO 7648 --- [main] c.e.l.m.MyPracticesApplication           : The following 1 profile is active: "dev"
+2023-01-08 12:29:47.281  WARN 7648 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-08 12:29:47.569  INFO 7648 --- [main] c.e.l.m.MyPracticesApplication           : Started MyPracticesApplication in 3.063 seconds (JVM running for 3.53)
+2023-01-08 12:36:11.809  INFO 3112 --- [main] c.e.l.m.MyPracticesApplication           : Starting MyPracticesApplication using Java 18.0.1.1 on LAPTOP-1L6K1H8T with PID 3112 (D:\idea\weishenme\MyPractices\target\classes started by wei'shen'me in D:\idea\weishenme\MyPractices)
+2023-01-08 12:36:11.811 DEBUG 3112 --- [main] c.e.l.m.MyPracticesApplication           : Running with Spring Boot v2.7.6, Spring v5.3.24
+2023-01-08 12:36:11.811  INFO 3112 --- [main] c.e.l.m.MyPracticesApplication           : The following 1 profile is active: "dev"
+2023-01-08 12:36:13.702  WARN 3112 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-08 12:36:13.969  INFO 3112 --- [main] c.e.l.m.MyPracticesApplication           : Started MyPracticesApplication in 2.425 seconds (JVM running for 2.834)
